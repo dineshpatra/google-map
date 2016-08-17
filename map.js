@@ -102,7 +102,10 @@
                         distance = response.rows[i].elements[0].distance.value; 
                     }
                     distance = distance/1000;
-                    alert(distance);
+                    d = "Distance between " + orAddr+ " and " + deAddr + " is " + distance.toString() + " kms"
+                    var twtLink = 'http://twitter.com/home?status=' +encodeURIComponent(d);
+                    //alert(twtLink);
+                    window.location = twtLink;
                 }
             });
         });
